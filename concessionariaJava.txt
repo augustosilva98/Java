@@ -1,0 +1,39 @@
+A classe Concessionaria é declarada no início do código. Ela contém um atributo carros do tipo List<Carro>. O atributo carros é uma lista de objetos da classe Carro.
+
+public class Concessionaria {
+    private List<Carro> carros;
+
+O construtor da classe Concessionaria() inicializa o atributo carros com uma nova lista de objetos da classe Carro.
+
+public Concessionaria() {
+    carros = new ArrayList<>();
+}
+
+O método adicionarCarro() da classe Concessionaria() recebe um objeto da classe Carro como parâmetro e adiciona o objeto à lista de carros.
+
+public void adicionarCarro(Carro carro) {
+    carros.add(carro);
+}
+
+O método exibirCarrosDisponiveis() da classe Concessionaria() imprime na tela todos os carros disponíveis na concessionária. O método usa um loop for para iterar sobre a lista de carros e imprimir cada carro que esteja disponível.
+
+public void exibirCarrosDisponiveis() {
+    System.out.println("Carros disponiveis na concessionaria:");
+    for (Carro carro : carros) {
+        if (carro.isDisponivel()) {
+            System.out.println(carro);
+        }
+    }
+}
+
+A classe Carro é declarada em seguida. Ela contém atributos para armazenar as informações do carro, como marca, modelo, ano, disponibilidade, preço, valor de entrada e número de parcelas.
+
+class Carro {
+    protected String marca;
+    protected String modelo;
+    protected int ano;
+    protected boolean disponivel;
+
+    public Carro(String marca, String modelo, int ano, boolean disponivel) {
+        this.marca = marca;
+        this.modelo = modelo
