@@ -1,0 +1,55 @@
+Gerenciamento escolar:
+
+A primeira parte do código lê as informações do aluno, como nome, professor, turma, matéria e nota.
+A segunda parte do código calcula a situação do aluno com base na nota obtida.
+O código funciona da seguinte forma:
+
+A primeira parte do código começa com a declaração de uma variável scanner do tipo Scanner. A variável scanner será usada para ler as informações do aluno.
+
+Scanner scanner = new Scanner(System.in);
+Use o código com cuidado. Saiba mais
+Em seguida, o código usa o método nextLine() da variável scanner para ler o nome do aluno.
+
+System.out.println("Digite o nome do aluno: ");
+String nomeAluno = scanner.nextLine();
+
+O código repete esse processo para ler as informações restantes do aluno.
+
+System.out.println("Digite o nome do professor: ");
+String nomeProfessor = scanner.nextLine();
+
+System.out.println("Digite a turma: ");
+String turma = scanner.nextLine();
+
+System.out.println("Digite a materia: ");
+String materia = scanner.nextLine();
+
+System.out.println("Digite a nota obtida durante o ano: ");
+double nota = scanner.nextDouble();
+
+A segunda parte do código começa com a impressão das informações do aluno.
+
+System.out.println("Informacoes do Aluno:");
+System.out.println("Nome do Aluno: " + nomeAluno);
+System.out.println("Nome do Professor: " + nomeProfessor);
+System.out.println("Turma: " + turma);
+System.out.println("Materia: " + materia);
+System.out.println("Nota Obtida: " + nota);
+
+Em seguida, o código usa a seguinte lógica para calcular a situação do aluno:
+
+Se a nota for maior ou igual a 6, o aluno está aprovado.
+Se a nota for maior ou igual a 4 e menor que 6, o aluno está em recuperação.
+Se a nota for menor que 4, o aluno está reprovado.
+
+if (nota >= 6) {
+    System.out.println("Situacao: Aprovado");
+} else if (nota >= 4 && nota <= 6) {
+    System.out.println("Situacao: Em recuperacao");
+} else {
+    System.out.println("Situacao: Reprovado");
+}
+
+Por fim, o código fecha a variável scanner.
+
+scanner.close();
